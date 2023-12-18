@@ -23,27 +23,15 @@
                         {{ session('error') }}
                     </div>
                 @endif
-                <form action="{{ route('appointment.store') }}" method="POST">
+                <form action="{{ route('novelty.store') }}" method="POST">
                     @csrf
                     <div class="form-group mb-2">
-                        <label for="speciality">Especialidad:</label>
-                        <input type="text" name="speciality" class="form-control" id="speciality" />
-                    </div>
-                    <div class="form-group mb-2">
-                        <label for="title">Fecha:</label>
-                        <input type="date" class="form-control" id="date" name="date">
-                    </div>
-                    <div class="form-group mb-2">
-                        <label for="status">Select appointment status</label>
-                        <select class="form-control" id="status" name="status">
-                            @foreach ($users as $user)
-                                @if ($user->role == 'paciente')
-                                    <option value="{{ $user->id }}">{{ $user->name }}</option>
-                                @else
-
-                                @endif
-                            @endforeach
-                        </select>
+                        <label for="speciality">Observación:</label>
+                        <textarea type="text" name="observation" class="form-control" id="observation" rows="3"></textarea>
+                        <input type="text" class="form-control" id="appointment_id" name="appointment_id"
+                            value="{{ $appointment_store }}" hidden>
+                        <input type="text" class="form-control" id="user_id" name="user_id"
+                            value="{{ Auth::user()->id }}" hidden>
                     </div>
                     <button type="submit" class="btn btn-primary">Registrar</button>
                 </form>

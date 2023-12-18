@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Novelty extends Model
 {
-    use HasFactory;
+    //use HasFactory;
+    protected $fillable = ['observation', 'appointment_id'];
+
 }
