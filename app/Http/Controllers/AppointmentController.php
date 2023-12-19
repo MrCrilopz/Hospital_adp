@@ -157,4 +157,8 @@ class AppointmentController extends Controller
         }
         return redirect('appointment')->with($respStatus, $respMsg);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b

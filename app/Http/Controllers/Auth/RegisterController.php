@@ -29,9 +29,14 @@ class RegisterController extends Controller
      *
      * @var string
      */
+<<<<<<< HEAD
     /* protected $redirectTo = RouteServiceProvider::HOME; */
     protected $redirectTo = '/appointment';
 
+=======
+    protected $redirectTo = RouteServiceProvider::HOME2;
+    // protected $redirectTo = 'auth.register';
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
 
     /**
      * Create a new controller instance.
@@ -40,7 +45,11 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
+<<<<<<< HEAD
         //$this->middleware('guest');
+=======
+        $this->middleware('guest');
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
     }
 
     /**
@@ -68,7 +77,10 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+<<<<<<< HEAD
             'role' => $data['role'],
+=======
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

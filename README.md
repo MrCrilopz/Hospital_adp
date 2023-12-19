@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -64,3 +65,23 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# Instrucciones de Uso - Laravel Hospital
+
+## Paso 1: Importar la Base de Datos
+1. Descarga el archivo `laravel-hospital.sql` desde el [repositorio en GitHub](https://github.com/MrCrilopz/Hospital_adp).
+2. Abre phpMyAdmin,crea y selecciona tu base de datos llamandola `laravel-hospital` y luego importa el archivo `laravel-hospital.sql` para crear las tablas necesarias.
+
+## Paso 2: Configuración de Usuarios para Pruebas
+Todos los usuarios han sido configurados con la contraseña `12345678` para facilitar las pruebas. Inicia sesión utilizando estas credenciales para explorar la funcionalidad del sistema.
+
+## Paso 3: Ejecutar la Aplicación desde Visual Studio Code
+1. Abre Visual Studio Code.
+2. Navega al directorio del proyecto.
+3. Abre una terminal integrada en VSC.
+4. Ejecuta el siguiente comando para iniciar el servidor de Laravel: `php artisan serve`.
+5. En otra terminal, ejecuta el siguiente comando para compilar los assets con npm: `npm run dev`.
+
+## ¡Listo para usar!
+Ahora puedes acceder a la aplicación en tu navegador utilizando la URL que proporciona Laravel al ejecutar `php artisan serve`. De esta manera se podrá usar el aplicativo para la prueba técnica
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b

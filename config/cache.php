@@ -52,6 +52,10 @@ return [
         'file' => [
             'driver' => 'file',
             'path' => storage_path('framework/cache/data'),
+<<<<<<< HEAD
+=======
+            'lock_path' => storage_path('framework/cache/data'),
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
         ],
 
         'memcached' => [

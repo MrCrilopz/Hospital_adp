@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Facade;
+<<<<<<< HEAD
+=======
+use Illuminate\Support\ServiceProvider;
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
 
 return [
 
@@ -15,7 +19,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'name' => env('APP_NAME', 'Hospital'),
+=======
+    'name' => env('APP_NAME', 'Laravel'),
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
 
     /*
     |--------------------------------------------------------------------------
@@ -82,7 +90,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'locale' => 'en',
+=======
+    'locale' => 'es',
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
 
     /*
     |--------------------------------------------------------------------------
@@ -140,7 +152,11 @@ return [
 
     'maintenance' => [
         'driver' => 'file',
+<<<<<<< HEAD
         // 'store'  => 'redis',
+=======
+        // 'store' => 'redis',
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
     ],
 
     /*
@@ -154,6 +170,7 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'providers' => [
 
         /*
@@ -182,6 +199,9 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+=======
+    'providers' => ServiceProvider::defaultProviders()->merge([
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
         /*
          * Package Service Providers...
          */
@@ -194,8 +214,12 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+<<<<<<< HEAD
 
     ],
+=======
+    ])->toArray(),
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
 
     /*
     |--------------------------------------------------------------------------
@@ -209,7 +233,11 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+<<<<<<< HEAD
         // 'ExampleClass' => App\Example\ExampleClass::class,
+=======
+        // 'Example' => App\Facades\Example::class,
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
     ])->toArray(),
 
 ];

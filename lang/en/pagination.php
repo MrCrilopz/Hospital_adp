@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 return [
 
     /*
@@ -16,4 +17,11 @@ return [
     'previous' => '&laquo; Previous',
     'next' => 'Next &raquo;',
 
+=======
+declare(strict_types=1);
+
+return [
+    'next'     => 'Next &raquo;',
+    'previous' => '&laquo; Previous',
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
 ];

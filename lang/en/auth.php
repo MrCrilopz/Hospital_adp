@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 return [
 
     /*
@@ -17,4 +18,12 @@ return [
     'password' => 'The provided password is incorrect.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
+=======
+declare(strict_types=1);
+
+return [
+    'failed'   => 'These credentials do not match our records.',
+    'password' => 'The password is incorrect.',
+    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
 ];

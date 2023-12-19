@@ -28,7 +28,11 @@ return [
     | sending an e-mail. You will specify which one you are using for your
     | mailers below. You are free to add additional mailers as required.
     |
+<<<<<<< HEAD
     | Supported: "smtp", "sendmail", "mailgun", "ses",
+=======
+    | Supported: "smtp", "sendmail", "mailgun", "ses", "ses-v2",
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
     |            "postmark", "log", "array", "failover"
     |
     */
@@ -36,6 +40,10 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
+<<<<<<< HEAD
+=======
+            'url' => env('MAIL_URL'),
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
             'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
@@ -51,10 +59,23 @@ return [
 
         'mailgun' => [
             'transport' => 'mailgun',
+<<<<<<< HEAD
+=======
+            // 'client' => [
+            //     'timeout' => 5,
+            // ],
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
         ],
 
         'postmark' => [
             'transport' => 'postmark',
+<<<<<<< HEAD
+=======
+            // 'message_stream_id' => null,
+            // 'client' => [
+            //     'timeout' => 5,
+            // ],
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
         ],
 
         'sendmail' => [

@@ -75,6 +75,25 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+<<<<<<< HEAD
+=======
+    | Job Batching
+    |--------------------------------------------------------------------------
+    |
+    | The following options configure the database and table that store job
+    | batching information. These options can be updated to any database
+    | connection and table which has been defined by your application.
+    |
+    */
+
+    'batching' => [
+        'database' => env('DB_CONNECTION', 'mysql'),
+        'table' => 'job_batches',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+>>>>>>> 5cdb635b1decd8a5efa001eed74e474bc2cd564b
     | Failed Queue Jobs
     |--------------------------------------------------------------------------
     |
