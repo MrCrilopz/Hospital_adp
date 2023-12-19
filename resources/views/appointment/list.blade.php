@@ -62,8 +62,10 @@
                             <tr>
                                 <th>{{ $appointment->id }}</th>
                                 @foreach ($users as $user)
-                                    @if ($user->id == $appointment->id)
+                                    @if ($user->id == $appointment->user_id)
                                         <td>{{ $user->name }}</td>
+                                    @else
+                                        
                                     @endif
                                 @endforeach
                                 <td>{{ $appointment->speciality }}</td>

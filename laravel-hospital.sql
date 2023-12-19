@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2023 at 01:13 AM
+-- Generation Time: Dec 19, 2023 at 03:05 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -41,7 +41,12 @@ CREATE TABLE `appointments` (
 --
 
 INSERT INTO `appointments` (`id`, `date`, `speciality`, `user_id`, `created_at`, `updated_at`) VALUES
-(2, '2023-12-15', 'Pediatría', 1, '2023-12-16 10:35:06', '2023-12-16 10:35:06');
+(2, '2023-12-15', 'Pediatría', 1, '2023-12-16 10:35:06', '2023-12-16 10:35:06'),
+(9, '2023-12-20', 'Pediatría', 4, '2023-12-19 07:30:20', '2023-12-19 07:30:20'),
+(10, '2023-12-20', 'Pediatría', 8, '2023-12-19 07:31:31', '2023-12-19 07:31:31'),
+(11, '2023-12-14', 'Pediatría', 1, '2023-12-19 07:39:28', '2023-12-19 07:39:28'),
+(12, '2023-12-20', 'Dermatología', 1, '2023-12-19 07:39:52', '2023-12-19 07:39:52'),
+(13, '2023-12-20', 'Oncología', 4, '2023-12-19 08:01:41', '2023-12-19 08:01:41');
 
 -- --------------------------------------------------------
 
@@ -159,13 +164,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `role`) VALUES
-(1, 'David Lopez', 'david@gmail.com', NULL, '$2y$10$h.f3mbUw/Z.JbMPetsKzK.6CdYucj2bggJl.y.bsZyMLX30BxuTRm', NULL, '2023-12-16 08:49:33', '2023-12-16 08:49:33', 'admin'),
+(1, 'David Lopez', 'davidmoya2014@gmail.com', NULL, '$2y$10$h.f3mbUw/Z.JbMPetsKzK.6CdYucj2bggJl.y.bsZyMLX30BxuTRm', NULL, '2023-12-16 08:49:33', '2023-12-16 08:49:33', 'admin'),
 (2, 'Cris Lopez', 'crislopez@gmail.com', NULL, '$2y$10$PEH8OkBtPY8lVK/P3M0/ROtH94vugePmZq9xyIUhiz2FsB1sOyOv2', NULL, '2023-12-16 09:32:02', '2023-12-16 09:32:02', 'admin'),
-(3, 'Paciente 6', 'paciente6@gmail.com', NULL, '$2y$10$2TQeQYGiUl1Uq4d5YMague.7pHtrYbGkNOa.CzjhlFUaiH/Beotci', NULL, '2023-12-16 09:57:40', '2023-12-16 09:57:40', 'paciente'),
+(3, 'adadsa', 'enrique@gmail.com', NULL, '$2y$10$2TQeQYGiUl1Uq4d5YMague.7pHtrYbGkNOa.CzjhlFUaiH/Beotci', NULL, '2023-12-16 09:57:40', '2023-12-16 09:57:40', 'paciente'),
 (4, 'paciente 1', 'paciente1@gmail.com', NULL, '$2y$10$S4vSpz3wSaOkQvEFJXVCaOGvYycmUnJs9TMJYbGbrdeMWN/PcbZiO', NULL, '2023-12-16 10:00:18', '2023-12-16 10:00:18', 'paciente'),
 (5, 'paciente 2', 'paciente2@gmail.com', NULL, '$2y$10$PZTef7O6r6Affyx7qpHLXOuQFSkHjEZ7VzaIMDtMHxxLkNFKOZaO2', NULL, '2023-12-16 10:03:33', '2023-12-16 10:03:33', 'paciente'),
 (6, 'paciente 3', 'paciente3@gmail.com', NULL, '$2y$10$JfTVb184ay/7h3ymI4zKeO05laAPemvO7stt4xFb5U8sF84WXiuay', NULL, '2023-12-16 10:05:20', '2023-12-16 10:05:20', 'paciente'),
-(7, 'paciente 0', 'paciente0@gmail.com', NULL, '$2y$10$m9bFpsTZYzS9kiHsb9CiA.rkpcBHeEIVKNqfa3W.DL6pys7y7aEmy', NULL, '2023-12-16 10:07:50', '2023-12-16 10:07:50', 'paciente'),
+(7, 'paciente0', 'paciente0@gmail.com', NULL, '$2y$10$m9bFpsTZYzS9kiHsb9CiA.rkpcBHeEIVKNqfa3W.DL6pys7y7aEmy', NULL, '2023-12-16 10:07:50', '2023-12-16 10:07:50', 'paciente'),
 (8, 'Paciente 4', 'paciente4@gmail.com', NULL, '$2y$10$KyWdztAPhv05Jkmx5IUpAeogEg7SW1LWm/MxuFQKcqimAUDn/tIGa', NULL, '2023-12-16 10:10:17', '2023-12-16 10:10:17', 'paciente'),
 (9, 'Paciente 5', 'paciente5@gmail.com', NULL, '$2y$10$lEVR0HvpnrKWnwNEitZ0n.Pcq46tPX3wZL8cn2yaG3HvRQmEUKtua', NULL, '2023-12-16 10:11:52', '2023-12-16 10:11:52', 'paciente');
 
@@ -229,7 +234,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `appointments`
 --
 ALTER TABLE `appointments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`

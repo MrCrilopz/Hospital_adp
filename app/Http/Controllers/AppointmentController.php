@@ -7,7 +7,7 @@ use App\Models\Appointment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
-use App\User;
+use App\Models\User;
 
 class AppointmentController extends Controller
 {
@@ -19,9 +19,14 @@ class AppointmentController extends Controller
     public function index()
     {
         $userId = Auth::user()->id;
-        $users = Auth::user()->all();
-        $appointments = Appointment::where(['user_id' => $userId])->get();
-        return view('appointment.list', ['appointments' => $appointments,'users'=>$users]);
+        $users = User::paginate();
+        $userRole = Auth::user()->role;
+        if ($userRole == 'admin') {
+            $appointments = Appointment::paginate();
+        } else {
+            $appointments = Appointment::where(['user_id' => $userId])->get();
+        }
+        return view('appointment.list', ['appointments' => $appointments, 'users' => $users]);
     }
     /**
      * Display a listing of the resource.
@@ -41,7 +46,7 @@ class AppointmentController extends Controller
     public function create()
     {
         $users = Auth::user()->all();
-        return view('appointment.add',compact('users'));
+        return view('appointment.add', compact('users'));
     }
 
     /**
@@ -52,10 +57,11 @@ class AppointmentController extends Controller
      */
     public function store(Request $request)
     {
-        $userId = Auth::user()->id;
-        $input = $request->input();
-        $input['user_id'] = $userId;
-        $appointmentStatus = Appointment::create($input);
+        $appointmentStatus = Appointment::create([
+            'date' => $request->date('date'),
+            'speciality' => $request->string('speciality'),
+            'user_id' => $request->integer('paciente')
+        ]);
 
         if ($appointmentStatus) {
             $message = 'Appointment successfully added';
@@ -95,10 +101,10 @@ class AppointmentController extends Controller
         $novelties = Novelty::where(['appointment_id' => $id])->get();
         $users = Auth::user()->all();
         if (!$novelties) {
-            return view('novelty.list', ['novelties' => $novelties,'appointment' => $id,'users'=>$users]);
+            return view('novelty.list', ['novelties' => $novelties, 'appointment' => $id, 'users' => $users]);
             /* return view('appointment.edit', ['appointment' => $appointment]); */
         } else {
-            return view('novelty.list',['novelties'=> $novelties,'appointment' => $id,'users'=>$users]);
+            return view('novelty.list', ['novelties' => $novelties, 'appointment' => $id, 'users' => $users]);
         }
     }
 

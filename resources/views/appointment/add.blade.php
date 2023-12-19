@@ -34,13 +34,17 @@
                         <input type="date" class="form-control" id="date" name="date">
                     </div>
                     <div class="form-group mb-2">
-                        <label for="status">Select appointment status</label>
-                        <select class="form-control" id="status" name="status">
+                        <label for="status">Seleccione al paciente</label>
+                        <select class="form-control" id="paciente" name="paciente">
                             @foreach ($users as $user)
-                                @if ($user->role == 'paciente')
-                                    <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                @if (Auth::user()->role == 'paciente')
+                                    @if ($user->id == Auth::user()->id)
+                                        <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                    @endif
                                 @else
-
+                                    @if ($user->role == 'paciente')
+                                        <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                    @endif
                                 @endif
                             @endforeach
                         </select>
